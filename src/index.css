@@ -1,0 +1,62 @@
+/* Smooth transitions for navigation links and buttons */
+nav a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3B82F6;
+    background-color: #E5E7EB;
+}
+
+/* Hover effects for combination cards */
+.combination-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.combination-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Smooth transitions for social media links */
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #3B82F6;
+}
+
+/* Smooth transitions and hover effects for form elements */
+input[type="range"] {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="range"]:hover {
+    transform: scale(1.05);
+}
+
+button {
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2563EB;
+}
+
+/* Smooth transitions and hover effects for quiz elements */
+input[type="radio"] {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:hover {
+    transform: scale(1.05);
+}
+
+/* Smooth transitions and hover effects for profile elements */
+.profile-card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
