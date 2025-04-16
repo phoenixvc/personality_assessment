@@ -1,0 +1,265 @@
+{
+  "id": "ocean-workspace",
+  "name": "Big Five (OCEAN) Workspace",
+  "description": "Analysis tools for the Big Five personality model",
+  "version": "1.0.0",
+  "author": "OCEAN Personality Dynamics",
+  "traits": [
+    {
+      "id": "openness",
+      "name": "Openness to Experience",
+      "description": "Reflects the degree of intellectual curiosity, creativity, and preference for novelty and variety.",
+      "facets": [
+        {
+          "id": "imagination",
+          "name": "Imagination",
+          "description": "The tendency to create an internal world of fantasy."
+        },
+        {
+          "id": "artistic_interests",
+          "name": "Artistic Interests",
+          "description": "Appreciation for art, music, poetry, and beauty."
+        },
+        {
+          "id": "emotionality",
+          "name": "Emotionality",
+          "description": "Awareness and exploration of one's own feelings."
+        },
+        {
+          "id": "adventurousness",
+          "name": "Adventurousness",
+          "description": "Eagerness to try new activities and experience different things."
+        },
+        {
+          "id": "intellect",
+          "name": "Intellect",
+          "description": "Intellectual curiosity and interest in abstract ideas."
+        },
+        {
+          "id": "liberalism",
+          "name": "Liberalism",
+          "description": "Openness to re-examining values and traditions."
+        }
+      ],
+      "interpretations": {
+        "high": "People high in openness are intellectually curious, open to emotion, sensitive to beauty and willing to try new things. They tend to be creative and aware of their feelings.",
+        "moderate": "People with moderate openness scores are practical but willing to consider new ways of doing things. They seek a balance between the traditional and the new.",
+        "low": "People low in openness prefer the plain, straightforward, and obvious over the complex, ambiguous, and subtle. They often regard the arts and sciences with suspicion and prefer familiar routines."
+      }
+    },
+    {
+      "id": "conscientiousness",
+      "name": "Conscientiousness",
+      "description": "Reflects the tendency to be organized, responsible, and hardworking.",
+      "facets": [
+        {
+          "id": "self_efficacy",
+          "name": "Self-Efficacy",
+          "description": "Confidence in one's ability to accomplish things."
+        },
+        {
+          "id": "orderliness",
+          "name": "Orderliness",
+          "description": "Tendency to be organized and neat."
+        },
+        {
+          "id": "dutifulness",
+          "name": "Dutifulness",
+          "description": "Strong sense of duty and moral obligation."
+        },
+        {
+          "id": "achievement_striving",
+          "name": "Achievement-Striving",
+          "description": "Need for personal achievement and high aspirations."
+        },
+        {
+          "id": "self_discipline",
+          "name": "Self-Discipline",
+          "description": "Ability to begin tasks and carry them through to completion."
+        },
+        {
+          "id": "cautiousness",
+          "name": "Cautiousness",
+          "description": "Disposition to think through possibilities before acting."
+        }
+      ],
+      "interpretations": {
+        "high": "People high in conscientiousness are organized, reliable, and methodical. They have strong self-discipline, aim for achievement, and prefer planned rather than spontaneous behavior.",
+        "moderate": "People with moderate conscientiousness balance reliability with flexibility. They are generally organized but can adapt to changing circumstances.",
+        "low": "People low in conscientiousness tend to be more laid-back, spontaneous, and creative. They may be disorganized and sometimes unreliable, but can be more flexible and adaptable."
+      }
+    },
+    {
+      "id": "extraversion",
+      "name": "Extraversion",
+      "description": "Reflects the tendency to seek stimulation in the company of others and to express positive emotions.",
+      "facets": [
+        {
+          "id": "friendliness",
+          "name": "Friendliness",
+          "description": "Interest in and friendliness towards others."
+        },
+        {
+          "id": "gregariousness",
+          "name": "Gregariousness",
+          "description": "Preference for the company of others."
+        },
+        {
+          "id": "assertiveness",
+          "name": "Assertiveness",
+          "description": "Tendency to take charge and direct the activities of others."
+        },
+        {
+          "id": "activity_level",
+          "name": "Activity Level",
+          "description": "Pace of life; level of busyness."
+        },
+        {
+          "id": "excitement_seeking",
+          "name": "Excitement-Seeking",
+          "description": "Need for environmental stimulation."
+        },
+        {
+          "id": "positive_emotions",
+          "name": "Positive Emotions",
+          "description": "Tendency to experience positive emotions."
+        }
+      ],
+      "interpretations": {
+        "high": "People high in extraversion are outgoing, energetic, and draw energy from social interactions. They are talkative and assertive, and thrive in dynamic environments with lots of people.",
+        "moderate": "People with moderate extraversion enjoy social situations but also value their alone time. They can be outgoing when needed but also appreciate quiet reflection.",
+        "low": "People low in extraversion (introverts) are reserved, reflective, and prefer less stimulating environments. They may be perceived as quiet or withdrawn but often have deep focus and concentration."
+      }
+    },
+    {
+      "id": "agreeableness",
+      "name": "Agreeableness",
+      "description": "Reflects the tendency to be compassionate and cooperative rather than suspicious and antagonistic towards others.",
+      "facets": [
+        {
+          "id": "trust",
+          "name": "Trust",
+          "description": "Belief in the sincerity and good intentions of others."
+        },
+        {
+          "id": "morality",
+          "name": "Morality",
+          "description": "Sincerity and straightforwardness; unwillingness to manipulate."
+        },
+        {
+          "id": "altruism",
+          "name": "Altruism",
+          "description": "Active concern for the welfare of others."
+        },
+        {
+          "id": "cooperation",
+          "name": "Cooperation",
+          "description": "Willingness to compromise and accommodate others."
+        },
+        {
+          "id": "modesty",
+          "name": "Modesty",
+          "description": "Tendency to be humble and self-effacing."
+        },
+        {
+          "id": "sympathy",
+          "name": "Sympathy",
+          "description": "Attitude of compassion for others."
+        }
+      ],
+      "interpretations": {
+        "high": "People high in agreeableness are trusting, helpful, and empathetic. They tend to be cooperative, warm, and concerned with the well-being of others.",
+        "moderate": "People with moderate agreeableness balance cooperation with self-interest. They can be warm and considerate but also stand up for themselves when needed.",
+        "low": "People low in agreeableness tend to be more competitive, skeptical, and challenging. They may be perceived as tough-minded, analytical, and less concerned with social harmony."
+      }
+    },
+    {
+      "id": "neuroticism",
+      "name": "Neuroticism",
+      "description": "Reflects the tendency to experience negative emotions and psychological distress.",
+      "facets": [
+        {
+          "id": "anxiety",
+          "name": "Anxiety",
+          "description": "Tendency to worry and be apprehensive."
+        },
+        {
+          "id": "anger",
+          "name": "Anger",
+          "description": "Tendency to experience anger and related states."
+        },
+        {
+          "id": "depression",
+          "name": "Depression",
+          "description": "Tendency to experience feelings of guilt, sadness, and hopelessness."
+        },
+        {
+          "id": "self_consciousness",
+          "name": "Self-Consciousness",
+          "description": "Sensitivity to criticism and social rejection."
+        },
+        {
+          "id": "immoderation",
+          "name": "Immoderation",
+          "description": "Tendency to act on cravings and urges."
+        },
+        {
+          "id": "vulnerability",
+          "name": "Vulnerability",
+          "description": "Susceptibility to stress and difficulty coping."
+        }
+      ],
+      "interpretations": {
+        "high": "People high in neuroticism tend to experience more negative emotions like anxiety, anger, and depression. They may be more reactive to stress and interpret ordinary situations as threatening.",
+        "moderate": "People with moderate neuroticism experience a normal range of emotions with occasional periods of negative feelings that they generally manage well.",
+        "low": "People low in neuroticism (high in emotional stability) tend to be calm, even-tempered, and less easily upset. They are less reactive to stress and generally more relaxed."
+      }
+    }
+  ],
+  "tools": [
+    {
+      "id": "trait-analysis",
+      "name": "Trait Analysis",
+      "description": "Analyze individual traits and their interactions"
+    },
+    {
+      "id": "facet-breakdown",
+      "name": "Facet Breakdown",
+      "description": "Detailed analysis of the six facets within each trait"
+    },
+    {
+      "id": "career-matching",
+      "name": "Career Matching",
+      "description": "Match personality traits to suitable career paths"
+    },
+    {
+      "id": "relationship-compatibility",
+      "name": "Relationship Compatibility",
+      "description": "Analyze personality compatibility in relationships"
+    }
+  ],
+  "research": {
+    "key_studies": [
+      {
+        "title": "The Five-Factor Model of Personality Across Cultures",
+        "authors": "McCrae, R. R., & Allik, J.",
+        "year": 2002,
+        "summary": "Examination of the Big Five model across different cultural contexts."
+      },
+      {
+        "title": "Personality in Adulthood: A Five-Factor Theory Perspective",
+        "authors": "McCrae, R. R., & Costa, P. T.",
+        "year": 2003,
+        "summary": "Comprehensive overview of the Five-Factor Theory and its implications."
+      }
+    ],
+    "meta_analyses": [
+      {
+        "title": "Personality Traits and Personal Values: A Meta-Analysis",
+        "authors": "Parks-Leduc, L., Feldman, G., & Bardi, A.",
+        "year": 2015,
+        "summary": "Meta-analysis examining relationships between Big Five traits and personal values."
+      }
+    ]
+  }
+}

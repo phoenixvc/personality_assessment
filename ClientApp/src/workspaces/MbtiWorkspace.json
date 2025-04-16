@@ -1,0 +1,367 @@
+{
+  "id": "mbti-workspace",
+  "name": "Myers-Briggs Type Indicator Workspace",
+  "description": "Analysis tools for the MBTI personality framework",
+  "version": "1.0.0",
+  "author": "OCEAN Personality Dynamics",
+  "dimensions": [
+    {
+      "id": "ei",
+      "name": "Extraversion (E) - Introversion (I)",
+      "description": "Where you focus your attention and get your energy",
+      "poles": [
+        {
+          "id": "extraversion",
+          "letter": "E",
+          "name": "Extraversion",
+          "description": "Focus on the outer world of people and activities; energized by interaction",
+          "characteristics": [
+            "Outgoing and socially confident",
+            "Energized by social interaction",
+            "Thinks out loud",
+            "Breadth of interests",
+            "Action-oriented"
+          ]
+        },
+        {
+          "id": "introversion",
+          "letter": "I",
+          "name": "Introversion",
+          "description": "Focus on the inner world of ideas and impressions; energized by reflection",
+          "characteristics": [
+            "Reserved and private",
+            "Energized by time alone",
+            "Thinks internally before speaking",
+            "Depth of interests",
+            "Reflection-oriented"
+          ]
+        }
+      ],
+      "ocean_correlations": {
+        "extraversion": 0.74,
+        "openness": 0.03,
+        "agreeableness": 0.09,
+        "conscientiousness": -0.15,
+        "neuroticism": -0.19
+      }
+    },
+    {
+      "id": "sn",
+      "name": "Sensing (S) - Intuition (N)",
+      "description": "How you take in information and what you pay attention to",
+      "poles": [
+        {
+          "id": "sensing",
+          "letter": "S",
+          "name": "Sensing",
+          "description": "Focus on concrete, real information you can perceive directly",
+          "characteristics": [
+            "Practical and realistic",
+            "Detail-oriented",
+            "Present-focused",
+            "Values experience",
+            "Step-by-step processing"
+          ]
+        },
+        {
+          "id": "intuition",
+          "letter": "N",
+          "name": "Intuition",
+          "description": "Focus on patterns, possibilities, and meaning",
+          "characteristics": [
+            "Imaginative and innovative",
+            "Big-picture oriented",
+            "Future-focused",
+            "Values inspiration",
+            "Leap-to-conclusion processing"
+          ]
+        }
+      ],
+      "ocean_correlations": {
+        "extraversion": 0.06,
+        "openness": 0.72,
+        "agreeableness": 0.03,
+        "conscientiousness": -0.15,
+        "neuroticism": 0.02
+      }
+    },
+    {
+      "id": "tf",
+      "name": "Thinking (T) - Feeling (F)",
+      "description": "How you make decisions and come to conclusions",
+      "poles": [
+        {
+          "id": "thinking",
+          "letter": "T",
+          "name": "Thinking",
+          "description": "Base decisions on objective logic and consistent principles",
+          "characteristics": [
+            "Analytical and logical",
+            "Objective decision-making",
+            "Truth-focused",
+            "Justice-oriented",
+            "Critique-oriented"
+          ]
+        },
+        {
+          "id": "feeling",
+          "letter": "F",
+          "name": "Feeling",
+          "description": "Base decisions on personal values and people-centered concerns",
+          "characteristics": [
+            "Empathetic and compassionate",
+            "Values-based decision-making",
+            "Harmony-focused",
+            "Mercy-oriented",
+            "Appreciation-oriented"
+          ]
+        }
+      ],
+      "ocean_correlations": {
+        "extraversion": -0.03,
+        "openness": 0.02,
+        "agreeableness": 0.44,
+        "conscientiousness": -0.08,
+        "neuroticism": 0.13
+      }
+    },
+    {
+      "id": "jp",
+      "name": "Judging (J) - Perceiving (P)",
+      "description": "How you approach the outside world and structure your life",
+      "poles": [
+        {
+          "id": "judging",
+          "letter": "J",
+          "name": "Judging",
+          "description": "Prefer structure, planning, and organization",
+          "characteristics": [
+            "Organized and structured",
+            "Planned and scheduled",
+            "Decision-oriented",
+            "Control-seeking",
+            "Closure-focused"
+          ]
+        },
+        {
+          "id": "perceiving",
+          "letter": "P",
+          "name": "Perceiving",
+          "description": "Prefer flexibility, spontaneity, and adaptability",
+          "characteristics": [
+            "Flexible and adaptable",
+            "Spontaneous and open-ended",
+            "Information-gathering oriented",
+            "Freedom-seeking",
+            "Options-focused"
+          ]
+        }
+      ],
+      "ocean_correlations": {
+        "extraversion": -0.04,
+        "openness": -0.15,
+        "agreeableness": -0.06,
+        "conscientiousness": 0.49,
+        "neuroticism": -0.11
+      }
+    }
+  ],
+  "types": [
+    {
+      "id": "istj",
+      "code": "ISTJ",
+      "name": "The Inspector",
+      "description": "Practical, fact-minded, reliable, and responsible. Decide logically what should be done and work toward it steadily, regardless of distractions.",
+      "strengths": ["Organized", "Honest and direct", "Responsible", "Calm and practical"],
+      "weaknesses": ["Stubborn", "Insensitive", "Always by the book", "Judgmental"],
+      "career_matches": ["Accountant", "Manager", "Military Officer", "Lawyer", "Judge"]
+    },
+    {
+      "id": "isfj",
+      "code": "ISFJ",
+      "name": "The Protector",
+      "description": "Quiet, friendly, responsible, and conscientious. Committed to meeting obligations and serving others.",
+      "strengths": ["Supportive", "Reliable", "Observant", "Patient"],
+      "weaknesses": ["Overworked", "Shy", "Take things personally", "Reluctant to change"],
+      "career_matches": ["Nurse", "Teacher", "Social Worker", "Administrative Assistant", "Customer Service"]
+    },
+    {
+      "id": "infj",
+      "code": "INFJ",
+      "name": "The Counselor",
+      "description": "Seek meaning and connection in ideas, relationships, and material possessions. Want to understand what motivates people.",
+      "strengths": ["Creative", "Insightful", "Principled", "Passionate"],
+      "weaknesses": ["Sensitive to criticism", "Perfectionist", "Private", "Burnout-prone"],
+      "career_matches": ["Counselor", "Psychologist", "Writer", "HR Manager", "Professor"]
+    },
+    {
+      "id": "intj",
+      "code": "INTJ",
+      "name": "The Architect",
+      "description": "Have original minds and great drive for implementing their ideas and achieving their goals.",
+      "strengths": ["Strategic", "Independent", "Knowledgeable", "Determined"],
+      "weaknesses": ["Arrogant", "Dismissive of emotions", "Overly critical", "Combative"],
+      "career_matches": ["Scientist", "Engineer", "Executive", "Investment Banker", "Systems Analyst"]
+    },
+    {
+      "id": "istp",
+      "code": "ISTP",
+      "name": "The Craftsman",
+      "description": "Tolerant and flexible, quiet observers until a problem appears, then act quickly to find workable solutions.",
+      "strengths": ["Optimistic", "Creative", "Practical", "Spontaneous"],
+      "weaknesses": ["Private", "Insensitive", "Easily bored", "Risk-prone"],
+      "career_matches": ["Mechanic", "Engineer", "Pilot", "Athlete", "Computer Programmer"]
+    },
+    {
+      "id": "isfp",
+      "code": "ISFP",
+      "name": "The Composer",
+      "description": "Quiet, friendly, sensitive, and kind. Enjoy the present moment, what's going on around them.",
+      "strengths": ["Artistic", "Sensitive", "Passionate", "Imaginative"],
+      "weaknesses": ["Fiercely independent", "Unpredictable", "Easily stressed", "Overly competitive"],
+      "career_matches": ["Artist", "Designer", "Veterinarian", "Nurse", "Chef"]
+    },
+    {
+      "id": "infp",
+      "code": "INFP",
+      "name": "The Healer",
+      "description": "Idealistic, loyal to their values and to people who are important to them. Want an external life that is congruent with their values.",
+      "strengths": ["Empathetic", "Generous", "Open-minded", "Creative"],
+      "weaknesses": ["Idealistic", "Self-isolating", "Impractical", "Emotionally vulnerable"],
+      "career_matches": ["Writer", "Counselor", "Artist", "Teacher", "HR Specialist"]
+    },
+    {
+      "id": "intp",
+      "code": "INTP",
+      "name": "The Architect",
+      "description": "Seek to develop logical explanations for everything that interests them. Theoretical and abstract, interested more in ideas than in social interaction.",
+      "strengths": ["Analytical", "Original", "Open-minded", "Curious"],
+      "weaknesses": ["Insensitive", "Absent-minded", "Condescending", "Loathe rules"],
+      "career_matches": ["Computer Programmer", "Mathematician", "Professor", "Architect", "Scientist"]
+    },
+    {
+      "id": "estp",
+      "code": "ESTP",
+      "name": "The Dynamo",
+      "description": "Flexible and tolerant, they take a pragmatic approach focused on immediate results. Theories and conceptual explanations bore them.",
+      "strengths": ["Energetic", "Rational", "Perceptive", "Sociable"],
+      "weaknesses": ["Impatient", "Risk-prone", "Unstructured", "Defiant"],
+      "career_matches": ["Entrepreneur", "Marketer", "Detective", "Paramedic", "Stockbroker"]
+    },
+    {
+      "id": "esfp",
+      "code": "ESFP",
+      "name": "The Performer",
+      "description": "Outgoing, friendly, and accepting. Exuberant lovers of life, people, and material comforts.",
+      "strengths": ["Bold", "Original", "Practical", "Observant"],
+      "weaknesses": ["Sensitive", "Conflict-averse", "Easily bored", "Poor long-term planners"],
+      "career_matches": ["Event Planner", "Sales Representative", "Flight Attendant", "Tour Guide", "Actor"]
+    },
+    {
+      "id": "enfp",
+      "code": "ENFP",
+      "name": "The Champion",
+      "description": "Warmly enthusiastic and imaginative. See life as full of possibilities.",
+      "strengths": ["Enthusiastic", "Innovative", "Perceptive", "Excellent communicators"],
+      "weaknesses": ["Poor practical skills", "Overthink", "Highly emotional", "Unfocused"],
+      "career_matches": ["Journalist", "Actor", "Consultant", "Psychologist", "Advertising Creative"]
+    },
+    {
+      "id": "entp",
+      "code": "ENTP",
+      "name": "The Visionary",
+      "description": "Quick, ingenious, stimulating, alert, and outspoken. Resourceful in solving new and challenging problems.",
+      "strengths": ["Knowledgeable", "Quick thinkers", "Charismatic", "Energetic"],
+      "weaknesses": ["Argumentative", "Insensitive", "Intolerant", "Poor follow-through"],
+      "career_matches": ["Entrepreneur", "Lawyer", "Consultant", "Engineer", "Scientist"]
+    },
+    {
+      "id": "estj",
+      "code": "ESTJ",
+      "name": "The Supervisor",
+      "description": "Practical, realistic, matter-of-fact. Decisive, quickly move to implement decisions.",
+      "strengths": ["Dedicated", "Strong-willed", "Direct", "Loyal"],
+      "weaknesses": ["Inflexible", "Stubborn", "Judgmental", "Insensitive"],
+      "career_matches": ["Manager", "Military Officer", "Police Officer", "Judge", "Financial Officer"]
+    },
+    {
+      "id": "esfj",
+      "code": "ESFJ",
+      "name": "The Provider",
+      "description": "Warmhearted, conscientious, and cooperative. Want harmony in their environment.",
+      "strengths": ["Strong practical skills", "Sensitive", "Warm", "Good at connecting"],
+      "weaknesses": ["Worried about social status", "Inflexible", "Reluctant to innovate", "Vulnerable to criticism"],
+      "career_matches": ["Teacher", "Healthcare Worker", "Sales Representative", "HR Specialist", "Social Worker"]
+    },
+    {
+      "id": "enfj",
+      "code": "ENFJ",
+      "name": "The Teacher",
+      "description": "Warm, empathetic, responsive, and responsible. Highly attuned to the emotions, needs, and motivations of others.",
+      "strengths": ["Charismatic", "Reliable", "Natural leaders", "Altruistic"],
+      "weaknesses": ["Overly idealistic", "Too selfless", "Fluctuating self-esteem", "Overly sensitive"],
+      "career_matches": ["Teacher", "HR Director", "Counselor", "Marketing Manager", "Politician"]
+    },
+    {
+      "id": "entj",
+      "code": "ENTJ",
+      "name": "The Commander",
+      "description": "Frank, decisive, assume leadership readily. Quickly see illogical and inefficient procedures and policies.",
+      "strengths": ["Efficient", "Energetic", "Self-confident", "Strong-willed"],
+      "weaknesses": ["Stubborn", "Intolerant", "Impatient", "Arrogant"],
+      "career_matches": ["Executive", "Lawyer", "Entrepreneur", "Management Consultant", "University Professor"]
+    }
+  ],
+  "tools": [
+    {
+      "id": "type-identifier",
+      "name": "Type Identifier",
+      "description": "Identify your MBTI type through a series of questions"
+    },
+    {
+      "id": "cognitive-functions",
+      "name": "Cognitive Functions Analysis",
+      "description": "Analyze the eight cognitive functions and their stack order"
+    },
+    {
+      "id": "career-guidance",
+      "name": "Career Guidance",
+      "description": "Find career paths that match your personality type"
+    },
+    {
+      "id": "relationship-dynamics",
+      "name": "Relationship Dynamics",
+      "description": "Understand how different types interact in relationships"
+    }
+  ],
+  "research": {
+    "key_studies": [
+      {
+        "title": "Gifts Differing: Understanding Personality Type",
+        "authors": "Myers, I. B., & Myers, P. B.",
+        "year": 1995,
+        "summary": "The foundational text on MBTI theory and applications."
+      },
+      {
+        "title": "MBTI Manual: A Guide to the Development and Use of the Myers-Briggs Type Indicator",
+        "authors": "Myers, I. B., McCaulley, M. H., Quenk, N. L., & Hammer, A. L.",
+        "year": 1998,
+        "summary": "Comprehensive guide to the MBTI assessment and its applications."
+      }
+    ],
+    "criticisms": [
+      {
+        "title": "Measuring the MBTI... And Coming Up Short",
+        "authors": "Pittenger, D. J.",
+        "year": 1993,
+        "summary": "Critical analysis of the reliability and validity of the MBTI."
+      },
+      {
+        "title": "The Relationship Between Myers-Briggs Type Indicator and Emotional Intelligence",
+        "authors": "Higgs, M.",
+        "year": 2001,
+        "summary": "Study examining the relationship between MBTI types and emotional intelligence."
+      }
+    ]
+  }
+}

@@ -1,0 +1,162 @@
+/* Smooth transitions for navigation links and buttons */
+nav a {
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3B82F6;
+    background-color: #E5E7EB;
+}
+
+/* Hover effects for combination cards */
+.combination-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+.combination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Smooth transitions for social media links */
+footer a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+    color: #3B82F6;
+    transform: scale(1.2);
+}
+
+/* Smooth transitions and hover effects for form elements */
+input[type="range"] {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+input[type="range"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+input[type="range"]:active {
+    transform: scale(1.02);
+}
+
+button {
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #2563EB;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Smooth transitions and hover effects for quiz elements */
+input[type="radio"] {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="radio"]:hover {
+    transform: scale(1.05);
+}
+
+/* Smooth transitions and hover effects for profile elements */
+.profile-card, .method-card, .test-card, .result-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+}
+
+.profile-card:hover, .method-card:hover, .test-card:hover, .result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Page load animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Staggered fade-in for grid items */
+@keyframes staggerFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.stagger-fade-in > * {
+    opacity: 0;
+}
+
+.stagger-fade-in > *:nth-child(1) { animation: staggerFadeIn 0.5s ease 0.1s forwards; }
+.stagger-fade-in > *:nth-child(2) { animation: staggerFadeIn 0.5s ease 0.2s forwards; }
+.stagger-fade-in > *:nth-child(3) { animation: staggerFadeIn 0.5s ease 0.3s forwards; }
+.stagger-fade-in > *:nth-child(4) { animation: staggerFadeIn 0.5s ease 0.4s forwards; }
+.stagger-fade-in > *:nth-child(5) { animation: staggerFadeIn 0.5s ease 0.5s forwards; }
+.stagger-fade-in > *:nth-child(6) { animation: staggerFadeIn 0.5s ease 0.6s forwards; }
+.stagger-fade-in > *:nth-child(7) { animation: staggerFadeIn 0.5s ease 0.7s forwards; }
+.stagger-fade-in > *:nth-child(8) { animation: staggerFadeIn 0.5s ease 0.8s forwards; }
+.stagger-fade-in > *:nth-child(9) { animation: staggerFadeIn 0.5s ease 0.9s forwards; }
+
+/* Scroll-triggered animations */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-bottom {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.slide-in-left.active, .slide-in-right.active, .slide-in-bottom.active {
+    opacity: 1;
+    transform: translate(0);
+}
+
+/* Pulse animation for call-to-action buttons */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Chart animations */
+@keyframes growBar {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+.chart-bar {
+    animation: growBar 1s ease-out forwards;
+}
+
+@keyframes drawCircle {
+    from { stroke-dashoffset: 283; } /* 2πr where r = 45 */
+    to { stroke-dashoffset: 0; }
+}
+
+.radar-chart path {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    animation: drawCircle 1.5s ease-out forwards;
+}
