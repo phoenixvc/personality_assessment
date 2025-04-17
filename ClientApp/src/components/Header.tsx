@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  toggleDarkMode: () => void;
+}
+
+const Header: React.FC<HeaderProps> = ({ toggleDarkMode }) => {
   return (
     <header className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -15,6 +19,12 @@ const Header: React.FC = () => {
           <a href="#ai-interaction" className="text-gray-700 hover:text-blue-600 transition-colors duration-300 ease-in-out">AI Interaction</a>
           <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors duration-300 ease-in-out">Contact</a>
         </nav>
+        <button 
+          onClick={toggleDarkMode} 
+          className="ml-4 px-4 py-2 bg-gray-200 text-gray-700 rounded hover:bg-gray-300 transition-colors"
+        >
+          Toggle Dark Mode
+        </button>
       </div>
     </header>
   );

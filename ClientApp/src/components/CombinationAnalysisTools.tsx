@@ -291,6 +291,12 @@ const CombinationAnalysisTools: React.FC = () => {
           >
             Framework Compatibility
           </button>
+          <button 
+            className={`px-4 py-2 rounded-lg transition-colors duration-300 ${activeTab === 'result-comparison' ? 'bg-blue-600 text-white' : 'bg-gray-200'}`}
+            onClick={() => setActiveTab('result-comparison')}
+          >
+            Result Comparison
+          </button>
         </div>
       </div>
 
@@ -489,6 +495,47 @@ const CombinationAnalysisTools: React.FC = () => {
             <p className="mt-2 text-sm text-gray-600">
               The Big Five (OCEAN) model is often considered a foundational framework in personality psychology, 
               which is why we use it as our baseline for comparisons.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {activeTab === 'result-comparison' && (
+        <div>
+          <h4 className="text-lg font-semibold mb-4">Compare Your Results</h4>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h5 className="text-md font-semibold mb-2">Your OCEAN Profile</h5>
+              <div className="h-80">
+                <Radar data={radarData} options={{ maintainAspectRatio: false }} />
+              </div>
+            </div>
+            <div>
+              <h5 className="text-md font-semibold mb-2">Average OCEAN Profile</h5>
+              <div className="h-80">
+                <Radar 
+                  data={{
+                    ...radarData,
+                    datasets: [
+                      {
+                        ...radarData.datasets[0],
+                        label: 'Average OCEAN Profile',
+                        data: [60, 55, 50, 65, 45] // Example average data
+                      }
+                    ]
+                  }} 
+                  options={{ maintainAspectRatio: false }} 
+                />
+              </div>
+            </div>
+          </div>
+          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+            <h4 className="text-lg font-semibold mb-2">Interpretation</h4>
+            <p>
+              Compare your OCEAN profile with the average profile to understand how your personality traits align with or differ from the general population.
+            </p>
+            <p className="mt-2 text-sm text-gray-600">
+              Note: The average profile data is based on a sample population and may vary.
             </p>
           </div>
         </div>

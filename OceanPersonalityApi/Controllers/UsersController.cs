@@ -71,5 +71,33 @@ namespace OceanPersonalityApi.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("{id:length(24)}/preferences")]
+        public async Task<ActionResult<UserPreferences>> GetUserPreferences(string id)
+        {
+            var preferences = await _userService.GetUserPreferencesAsync(id);
+
+            if (preferences is null)
+            {
+                return NotFound();
+            }
+
+            return preferences;
+        }
+
+        [HttpPut("{id:length(24)}/preferences")]
+        public async Task<IActionResult> UpdateUserPreferences(string id, UserPreferences updatedPreferences)
+        {
+            var user = await _userService.GetAsync(id);
+
+            if (user is null)
+            {
+                return NotFound();
+            }
+
+            await _userService.UpdateUserPreferencesAsync(id, updatedPreferences);
+
+            return NoContent();
+        }
     }
 }

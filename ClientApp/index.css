@@ -160,3 +160,112 @@ input[type="radio"]:hover {
     stroke-dashoffset: 283;
     animation: drawCircle 1.5s ease-out forwards;
 }
+
+/* Define CSS variables for light and dark modes */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #3B82F6;
+    --secondary-color: #E5E7EB;
+    --hover-color: #2563EB;
+    --card-background-color: #ffffff;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
+    --button-background-color: #3B82F6;
+    --button-hover-color: #2563EB;
+    --button-text-color: #ffffff;
+}
+
+[data-theme="dark"] {
+    --background-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --primary-color: #90cdf4;
+    --secondary-color: #2d2d2d;
+    --hover-color: #63b3ed;
+    --card-background-color: #2d2d2d;
+    --card-shadow-color: rgba(255, 255, 255, 0.1);
+    --button-background-color: #90cdf4;
+    --button-hover-color: #63b3ed;
+    --button-text-color: #1a1a1a;
+}
+
+/* Apply CSS variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+nav a {
+    color: var(--text-color);
+}
+
+nav a:hover {
+    background-color: var(--secondary-color);
+}
+
+.combination-card {
+    background-color: var(--card-background-color);
+    box-shadow: 0 10px 15px -3px var(--card-shadow-color), 0 4px 6px -2px var(--card-shadow-color);
+}
+
+footer a {
+    color: var(--text-color);
+}
+
+input[type="range"] {
+    background-color: var(--secondary-color);
+}
+
+button {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* Themed thumb icons for sliders */
+input[type="range"]::-webkit-slider-thumb {
+    background: url('path/to/icon.png') no-repeat center;
+    background-size: contain;
+}
+
+input[type="range"]::-moz-range-thumb {
+    background: url('path/to/icon.png') no-repeat center;
+    background-size: contain;
+}
+
+input[type="range"]::-ms-thumb {
+    background: url('path/to/icon.png') no-repeat center;
+    background-size: contain;
+}
+
+/* Gradient colors on slider tracks */
+input[type="range"] {
+    background: linear-gradient(to right, red, green);
+}
+
+/* Animated thumb icons */
+input[type="range"]::-webkit-slider-thumb {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="range"]::-moz-range-thumb {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="range"]::-ms-thumb {
+    transition: transform 0.2s ease-in-out;
+}
+
+input[type="range"]:active::-webkit-slider-thumb {
+    transform: scale(1.2);
+}
+
+input[type="range"]:active::-moz-range-thumb {
+    transform: scale(1.2);
+}
+
+input[type="range"]:active::-ms-thumb {
+    transform: scale(1.2);
+}
