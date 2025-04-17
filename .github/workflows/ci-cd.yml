@@ -1,0 +1,103 @@
+# GitHub Actions workflow for PersonalityFramework
+# This workflow builds, tests, and deploys the Aspire solution
+
+name: PersonalityFramework CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+env:
+  DOTNET_VERSION: '9.0.x'
+  BUILD_CONFIGURATION: 'Release'
+  ACR_LOGIN_SERVER: ${{ secrets.ACR_LOGIN_SERVER }}
+  API_IMAGE_NAME: 'PersonalityFramework-api'
+  WEB_IMAGE_NAME: 'PersonalityFramework-web'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --configuration ${{ env.BUILD_CONFIGURATION }} --no-restore
+      
+    - name: Test
+      run: dotnet test --configuration ${{ env.BUILD_CONFIGURATION }} --no-build
+      
+    - name: Login to Azure Container Registry
+      uses: azure/docker-login@v1
+      with:
+        login-server: ${{ env.ACR_LOGIN_SERVER }}
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
+      
+    - name: Build and push API Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: ./PersonalityFramework.Api/Dockerfile
+        push: true
+        tags: |
+          ${{ env.ACR_LOGIN_SERVER }}/${{ env.API_IMAGE_NAME }}:${{ github.run_number }}
+          ${{ env.ACR_LOGIN_SERVER }}/${{ env.API_IMAGE_NAME }}:latest
+          
+    - name: Build and push Web Docker image
+      uses: docker/build-push-action@v4
+      with:
+        context: .
+        file: ./PersonalityFramework.Web/Dockerfile
+        push: true
+        tags: |
+          ${{ env.ACR_LOGIN_SERVER }}/${{ env.WEB_IMAGE_NAME }}:${{ github.run_number }}
+          ${{ env.ACR_LOGIN_SERVER }}/${{ env.WEB_IMAGE_NAME }}:latest
+          
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set Kubernetes Context
+      uses: azure/k8s-set-context@v3
+      with:
+        kubeconfig: ${{ secrets.KUBE_CONFIG }}
+        
+    - name: Deploy API to Kubernetes
+      uses: Azure/k8s-deploy@v4
+      with:
+        namespace: default
+        manifests: |
+          ./infra/k8s/api-deployment.yaml
+          ./infra/k8s/api-service.yaml
+        images: |
+          ${{ env.ACR_LOGIN_SERVER }}/${{ env.API_IMAGE_NAME }}:${{ github.run_number }}
+          
+    - name: Deploy Web to Kubernetes
+      uses: Azure/k8s-deploy@v4
+      with:
+        namespace: default
+        manifests: |
+          ./infra/k8s/web-deployment.yaml
+          ./infra/k8s/web-service.yaml
+        images: |
+          ${{ env.ACR_LOGIN_SERVER }}/${{ env.WEB_IMAGE_NAME }}:${{ github.run_number }}
+          
+    - name: Deploy Ingress to Kubernetes
+      uses: Azure/k8s-deploy@v4
+      with:
+        namespace: default
+        manifests: |
+          ./infra/k8s/ingress.yaml

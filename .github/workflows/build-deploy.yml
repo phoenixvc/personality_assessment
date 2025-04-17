@@ -1,0 +1,75 @@
+name: Build and Deploy to Azure Arc
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+        
+    - name: Restore dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+      
+    - name: Test
+      run: dotnet test --no-build --configuration Release
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        
+    - name: Build Web frontend
+      run: |
+        cd PersonalityFramework.Web
+        npm ci
+        npm run build
+        
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        
+    - name: Build and push Docker images
+      uses: azure/docker-login@v1
+      with:
+        login-server: ${{ secrets.ACR_LOGIN_SERVER }}
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
+        
+    - name: Build and push API image
+      run: |
+        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/-api:latest -f PersonalityFramework.Api/Dockerfile .
+        docker push ${{ secrets.ACR_LOGIN_SERVER }}/-api:latest
+        
+    - name: Build and push Web image
+      run: |
+        docker build -t ${{ secrets.ACR_LOGIN_SERVER }}/-web:latest -f PersonalityFramework.Web/Dockerfile PersonalityFramework.Web
+        docker push ${{ secrets.ACR_LOGIN_SERVER }}/-web:latest
+        
+    - name: Deploy to Kubernetes
+      uses: azure/k8s-deploy@v1
+      with:
+        namespace: default
+        manifests: |
+          infra/k8s/api-deployment.yaml
+          infra/k8s/api-service.yaml
+          infra/k8s/web-deployment.yaml
+          infra/k8s/web-service.yaml
+          infra/k8s/ingress.yaml
+        images: |
+          ${{ secrets.ACR_LOGIN_SERVER }}/-api:latest
+          ${{ secrets.ACR_LOGIN_SERVER }}/-web:latest
