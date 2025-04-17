@@ -71,5 +71,18 @@ namespace OceanPersonalityApi.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("personalized/{userId}")]
+        public async Task<ActionResult<List<ExperienceSuggestion>>> GetPersonalizedSuggestions(string userId)
+        {
+            var personalizedSuggestions = await _experienceSuggestionService.GetPersonalizedSuggestionsAsync(userId);
+
+            if (personalizedSuggestions is null || !personalizedSuggestions.Any())
+            {
+                return NotFound();
+            }
+
+            return personalizedSuggestions;
+        }
     }
 }

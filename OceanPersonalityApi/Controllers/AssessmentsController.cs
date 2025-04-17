@@ -71,5 +71,18 @@ namespace OceanPersonalityApi.Controllers
 
             return NoContent();
         }
+
+        [HttpGet("user/{userId}")]
+        public async Task<ActionResult<List<Assessment>>> GetByUserId(string userId)
+        {
+            var assessments = await _assessmentService.GetByUserIdAsync(userId);
+
+            if (assessments is null || assessments.Count == 0)
+            {
+                return NotFound();
+            }
+
+            return assessments;
+        }
     }
 }

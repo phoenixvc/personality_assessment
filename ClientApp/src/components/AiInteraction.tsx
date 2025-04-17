@@ -24,6 +24,16 @@ const AiInteraction: React.FC = () => {
           <li>Workshops and events to attend</li>
         </ul>
       </div>
+
+      <div className="mt-12 bg-white rounded-xl shadow-lg p-8 transition-transform duration-200 ease-in-out transform hover:translate-y-1">
+        <h3 className="text-2xl font-bold mb-6">Personalized Recommendations</h3>
+        <p className="text-gray-600 mb-4">Based on your assessment results, we provide personalized recommendations to help you grow and succeed.</p>
+        <ul className="list-disc pl-5 text-gray-700">
+          <li>Career paths that align with your strengths</li>
+          <li>Activities to enhance your skills</li>
+          <li>Books and articles tailored to your interests</li>
+        </ul>
+      </div>
     </section>
   );
 };

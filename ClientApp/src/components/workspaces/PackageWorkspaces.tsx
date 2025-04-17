@@ -276,7 +276,7 @@ const PackageWorkspaces: React.FC = () => {
     
     // Apply official filter
     if (filterOfficial) {
-      filtered = filtered.filter(pkg => pkg.isOfficial);
+      filtered = filtered.filter(pkg.isOfficial);
     }
     
     // Apply sorting
