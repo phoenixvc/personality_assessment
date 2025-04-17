@@ -1,1 +1,61 @@
-node_modules
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+
+# Aspire specific
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.dbmdl
+*.jfm
+.vs/
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.swp
+*.swo
+
+# Coverage and test reports
+coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+
+# Misc
+.cache/
+.temp/
+tmp/
+.DS_Store
+Thumbs.db
+
+# Aspire generated files
+*.runtimeconfig.json
+*.servicemanifest.json
+**/Properties/launchSettings.json
