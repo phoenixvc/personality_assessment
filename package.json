@@ -1,0 +1,41 @@
+{
+  "name": "personality-framework",
+  "version": "1.0.0",
+  "description": "Personality Framework Application with Aspire",
+  "scripts": {
+    "start": "node scripts/run-app.js",
+    "start:api": "dotnet run --project aspire/PersonalityFramework.Api/PersonalityFramework.Api.csproj",
+    "start:web": "cd aspire/PersonalityFramework.Web/ClientApp && npm run dev",
+    "start:aspire": "dotnet run --project aspire/PersonalityFramework.AppHost/PersonalityFramework.AppHost.csproj",
+    "start:aspire:no-containers": "dotnet run --project aspire/PersonalityFramework.AppHost/PersonalityFramework.AppHost.csproj -- --no-containers",
+    "build": "dotnet build aspire/PersonalityFramework.sln",
+    "clean": "dotnet clean aspire/PersonalityFramework.sln",
+    "test": "dotnet test aspire/PersonalityFramework.sln",
+    "install:all": "node scripts/install-dependencies.js",
+    "docker:check": "node scripts/docker/check-docker.js",
+    "docker:start": "node scripts/docker/start-docker.js",
+    "docker:install": "node scripts/docker/install-docker.js",
+    "wsl:fix": "node scripts/docker/wsl/troubleshoot.js",
+    "wsl:features": "node scripts/docker/wsl/enable-features.js",
+    "wsl:registry": "node scripts/docker/wsl/fix-registry.js",
+    "wsl:update": "node scripts/docker/wsl/install-update.js",
+    "wsl:version": "node scripts/docker/wsl/set-version.js",
+    "wsl:reset": "node scripts/docker/wsl/reset-wsl.js"
+  },
+  "keywords": [
+    "aspire",
+    "dotnet",
+    "personality",
+    "react"
+  ],
+  "author": "HJ Smit",
+  "license": "MIT",
+  "dependencies": {
+    "framer-motion": "^12.7.4",
+    "react-helmet": "^6.1.0",
+    "react-router-dom": "^7.5.1"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.11"
+  }
+}

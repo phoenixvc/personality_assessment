@@ -1,0 +1,95 @@
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .article {
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+  }
+  
+  .articleHeader {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 1.5rem;
+  }
+  
+  .articleTitle {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+    line-height: 1.2;
+  }
+  
+  .articleMeta {
+    display: flex;
+    gap: 1.5rem;
+    color: #718096;
+    font-size: 0.875rem;
+  }
+  
+  .articleDate {
+    display: inline-block;
+  }
+  
+  .articleContent {
+    line-height: 1.8;
+    color: #2d3748;
+    font-size: 1.125rem;
+  }
+  
+  .articleContent h2 {
+    font-size: 1.75rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2d3748;
+  }
+  
+  .articleContent h3 {
+    font-size: 1.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    color: #2d3748;
+  }
+  
+  .articleContent p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .articleContent ul, .articleContent ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  
+  .articleContent li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .articleContent a {
+    color: #3182ce;
+    text-decoration: underline;
+  }
+  
+  .articleContent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .articleContent blockquote {
+    border-left: 4px solid #38a169;
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1.5rem 0;
+    color: #4a5568;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }

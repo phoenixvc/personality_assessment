@@ -1,0 +1,394 @@
+.heroSection {
+  padding: 3rem 0;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.heroCta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  background-color: #38a169;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  display: inline-block;
+}
+
+.primaryButton:hover {
+  background-color: #2f855a;
+}
+
+.secondaryButton {
+  background-color: transparent;
+  color: #38a169;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  border: 2px solid #38a169;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.secondaryButton:hover {
+  background-color: rgba(56, 161, 105, 0.1);
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #2d3748;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #38a169;
+}
+
+/* Features Section */
+.featuresSection {
+  margin-bottom: 5rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  color: #38a169;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  background-color: rgba(56, 161, 105, 0.1);
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.featureDescription {
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.featureLink {
+  color: #38a169;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.featureLink:hover {
+  color: #2f855a;
+  text-decoration: underline;
+}
+
+/* How It Works Section */
+.howItWorksSection {
+  margin-bottom: 5rem;
+  background-color: #f9fafb;
+  padding: 4rem 0;
+  border-radius: 8px;
+}
+
+.stepsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+}
+
+.stepNumber {
+  background-color: #38a169;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.stepDescription {
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+/* Testimonials Section */
+.testimonialsSection {
+  margin-bottom: 5rem;
+}
+
+.testimonialCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonialCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialContent {
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.testimonialText {
+  color: #4a5568;
+  font-style: italic;
+  line-height: 1.6;
+  position: relative;
+}
+
+.testimonialText::before {
+  content: '"';
+  font-size: 3rem;
+  color: rgba(56, 161, 105, 0.2);
+  position: absolute;
+  top: -1.5rem;
+  left: -1rem;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+}
+
+.testimonialImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.testimonialInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialName {
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.testimonialRole {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  background-color: #38a169;
+  padding: 4rem 0;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.ctaTitle {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.ctaDescription {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.ctaButton {
+  background-color: white;
+  color: #38a169;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.ctaButton:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.125rem;
+  }
+  
+  .stepsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .step {
+    margin-bottom: 2rem;
+  }
+  
+  .ctaTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .heroSection {
+    background-color: #2d3748;
+  }
+  
+  .heroTitle {
+    color: #f7fafc;
+  }
+  
+  .heroDescription {
+    color: #e2e8f0;
+  }
+  
+  .sectionTitle {
+    color: #f7fafc;
+  }
+  
+  .featureCard {
+    background-color: #2d3748;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .featureTitle {
+    color: #f7fafc;
+  }
+  
+  .featureDescription {
+    color: #e2e8f0;
+  }
+  
+  .howItWorksSection {
+    background-color: #2d3748;
+  }
+  
+  .stepTitle {
+    color: #f7fafc;
+  }
+  
+  .stepDescription {
+    color: #e2e8f0;
+  }
+  
+  .testimonialCard {
+    background-color: #2d3748;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .testimonialText {
+    color: #e2e8f0;
+  }
+  
+  .testimonialName {
+    color: #f7fafc;
+  }
+}
